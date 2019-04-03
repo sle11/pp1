@@ -32,3 +32,24 @@ function largest($arr) {
 
 echo 'largest: ';
 print largest($numbers);
+
+echo '<br>';
+
+function average($arr) {
+    $sum = 0;
+    $count = 0;
+    foreach ($arr as $value) {
+        $sum += $value;
+        $count++;
+    }
+
+    $average = $sum / $count;
+
+    return $average;
+}
+
+echo 'average: ';
+print average($numbers);
+
+echo '<br>';
+
