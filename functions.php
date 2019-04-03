@@ -15,4 +15,20 @@ function printArr($arr) {
         echo $value;
     }
 }
+echo 'printArr: ';
 printArr($numbers);
+
+echo '<br>';
+
+function largest($arr) {
+    $largest = 0;
+    foreach ($arr as $value) {
+        if($largest < $value) {
+            $largest = $value;
+        }
+    }
+    return $largest;
+}
+
+echo 'largest: ';
+print largest($numbers);
