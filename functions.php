@@ -12,7 +12,7 @@ $numbers = array(7, 9, 8, 9, 8, 8, 6);
 
 function printArr($arr) {
     foreach ($arr as $value) {
-        echo $value;
+        echo $value . ' ';
     }
 }
 echo 'printArr: ';
@@ -53,3 +53,11 @@ print average($numbers);
 
 echo '<br>';
 
+function removeDupe($arr) {
+    return array_unique($arr);
+}
+
+echo 'removeDupe: ';
+foreach (removeDupe($numbers) as $value) {
+    echo $value . ' ';
+}
