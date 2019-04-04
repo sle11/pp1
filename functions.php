@@ -21,12 +21,14 @@ printArr($numbers);
 echo '<br>';
 
 function largest($arr) {
-    $largest = 0;
-    foreach ($arr as $value) {
-        if($largest < $value) {
-            $largest = $value;
+    $largest = $arr[0];
+    $arrLength = count($arr);
+    for($i = 1; $i < $arrLength; $i++) {
+        if($largest < $arr[$i]) {
+            $largest = $arr[$i];
         }
     }
+
     return $largest;
 }
 
