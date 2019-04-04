@@ -61,3 +61,24 @@ echo 'removeDupe: ';
 foreach (removeDupe($numbers) as $value) {
     echo $value . ' ';
 }
+
+echo '<br>';
+
+function distribution($arr) {
+    $newArr = array();
+    sort($arr);
+
+    foreach ($arr as $value) {
+        if(isset($newArr[$value])) {
+            $newArr[$value] += 1;
+        }
+        else {
+            $newArr[$value] = 1;
+        }
+    }
+
+    return $newArr;
+}
+
+echo 'distribution: ';
+print_r (distribution($numbers));
